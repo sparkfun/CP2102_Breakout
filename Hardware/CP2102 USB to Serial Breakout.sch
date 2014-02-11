@@ -951,14 +951,6 @@ Source: www.silabs.com .. CP2101.pdf</description>
 <rectangle x1="2" y1="1.3" x2="3.05" y2="1.7" layer="29" rot="R180"/>
 <rectangle x1="2.02" y1="1.37" x2="2.58" y2="1.63" layer="31" rot="R180"/>
 </package>
-<package name="FIDUCIAL-1.5X3">
-<circle x="0" y="0" radius="0.9055" width="1.27" layer="29"/>
-<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="FIDUCIAL-1X2.5">
-<circle x="0" y="0" radius="0.9" width="1.27" layer="29"/>
-<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
-</package>
 <package name="1X02">
 <wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.2032" layer="21"/>
 <wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.2032" layer="21"/>
@@ -1369,9 +1361,6 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <pad name="2" x="-1.27" y="0" drill="0.7"/>
 <text x="-0.889" y="1.524" size="0.4064" layer="25">&gt;Name</text>
 <text x="-1.905" y="-3.683" size="0.8128" layer="21">&gt;Value</text>
-</package>
-<package name="FIDUCIAL-1X2">
-<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
 </package>
 <package name="S2B-PH">
 <description>2mm SMD side-entry connector. tDocu layer indicates the actual physical plastic housing. +/- indicate SparkFun standard batteries and wiring.</description>
@@ -1999,11 +1988,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <pin name="GND@EXP" x="-17.78" y="-12.7" length="middle" direction="pwr"/>
 <pin name="GND@M" x="-17.78" y="-10.16" length="middle" direction="pwr"/>
 </symbol>
-<symbol name="FIDUCIAL">
-<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
-<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
-</symbol>
 <symbol name="GND">
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
@@ -2294,30 +2278,6 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <connect gate="G$1" pin="+" pad="+"/>
 <connect gate="G$1" pin="-" pad="-"/>
 </connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="FIDUCIAL">
-<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
-Various fiducial points for machine vision alignment.</description>
-<gates>
-<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
-</gates>
-<devices>
-<device name="1.5X3" package="FIDUCIAL-1.5X3">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="1X2" package="FIDUCIAL-1X2">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="1X2.5" package="FIDUCIAL-1X2.5">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -3063,6 +3023,20 @@ We've spent an enormous amount of time creating and checking these footprints an
 <vertex x="-1.0938" y="0" curve="-247.497204"/>
 <vertex x="0.4186" y="-1.0105"/>
 </polygon>
+</package>
+<package name="FIDUCIAL-1.5X3">
+<circle x="0" y="0" radius="0.9055" width="1.27" layer="29"/>
+<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="FIDUCIAL-1X2">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="FIDUCIAL-1X2.5">
+<circle x="0" y="0" radius="0.9" width="1.27" layer="29"/>
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="MICRO-FIDUCIAL">
+<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
 </package>
 </packages>
 <symbols>
@@ -6661,6 +6635,11 @@ We've spent an enormous amount of time creating and checking these footprints an
 <vertex x="0.6834" y="-1.65"/>
 </polygon>
 </symbol>
+<symbol name="FIDUCIAL">
+<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="FRAME-LETTER" prefix="FRAME">
@@ -6713,6 +6692,35 @@ Standard 8.5x11 US Letter frame</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="FIDUCIAL" prefix="FID">
+<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
+Various fiducial points for machine vision alignment.</description>
+<gates>
+<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1.5X3" package="FIDUCIAL-1.5X3">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1X2" package="FIDUCIAL-1X2">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1X2.5" package="FIDUCIAL-1X2.5">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="UFIDUCIAL" package="MICRO-FIDUCIAL">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -6733,8 +6741,6 @@ Standard 8.5x11 US Letter frame</description>
 <part name="C2" library="SparkFun-Capacitors" deviceset="0.1UF-25V(+80/-20%)(0603)" device="" value="0.1uF"/>
 <part name="C3" library="SparkFun" deviceset="CAP_POL" device="1206" value="10uF"/>
 <part name="U1" library="SparkFun" deviceset="CP210X_USB_UART" device="" value="CP2102"/>
-<part name="U$2" library="SparkFun" deviceset="FIDUCIAL" device="1X2"/>
-<part name="U$3" library="SparkFun" deviceset="FIDUCIAL" device="1X2"/>
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND2" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
@@ -6756,6 +6762,8 @@ Standard 8.5x11 US Letter frame</description>
 <part name="GND6" library="SparkFun" deviceset="GND" device=""/>
 <part name="U$4" library="SparkFun-Aesthetics" deviceset="REVISION" device=""/>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
+<part name="FID1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
+<part name="FID2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 </parts>
 <sheets>
 <sheet>
@@ -6774,8 +6782,6 @@ Standard 8.5x11 US Letter frame</description>
 <instance part="C2" gate="G$1" x="114.3" y="104.14"/>
 <instance part="C3" gate="G$1" x="53.34" y="104.14"/>
 <instance part="U1" gate="G$1" x="144.78" y="101.6"/>
-<instance part="U$2" gate="G$1" x="246.38" y="27.94"/>
-<instance part="U$3" gate="G$1" x="241.3" y="27.94"/>
 <instance part="GND1" gate="1" x="124.46" y="81.28"/>
 <instance part="GND2" gate="1" x="93.98" y="106.68"/>
 <instance part="GND3" gate="1" x="53.34" y="93.98"/>
@@ -6797,6 +6803,8 @@ Standard 8.5x11 US Letter frame</description>
 <instance part="GND6" gate="1" x="104.14" y="83.82"/>
 <instance part="U$4" gate="G$1" x="149.352" y="6.858"/>
 <instance part="LOGO1" gate="G$1" x="132.08" y="12.7"/>
+<instance part="FID1" gate="G$1" x="241.3" y="27.94"/>
+<instance part="FID2" gate="G$1" x="246.38" y="27.94"/>
 </instances>
 <busses>
 </busses>
